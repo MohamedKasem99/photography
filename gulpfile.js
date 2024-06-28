@@ -12,17 +12,17 @@ gulp.task('delete', function () {
 });
 
 gulp.task('resize-images', function () {
-    return gulp.src('images/*.*')
+    return gulp.src('/home/kasem/lulu/photography/images/*.*')
         .pipe(imageResize({
             width: 1024,
             imageMagick: true
         }))
-        .pipe(gulp.dest('images/fulls'))
+        .pipe(gulp.dest('/home/kasem/lulu/photography/images/fulls'))
         .pipe(imageResize({
             width: 512,
             imageMagick: true
         }))
-        .pipe(gulp.dest('images/thumbs'));
+        .pipe(gulp.dest('/home/kasem/lulu/photography/images/thumbs'));
 });
 
 // compile scss to css
